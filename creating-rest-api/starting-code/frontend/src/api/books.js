@@ -27,7 +27,7 @@ export const getBooks = async () => {
 export const updateBook = async (id, newTitle, newStart, newEnd) => {
     const response = await fetch(`${API_ENDPOINT}/books/${id}`, {
         method: "PUT",
-        body: json.stringify({
+        body: JSON.stringify({
             newTitle,
             newStart,
             newEnd
